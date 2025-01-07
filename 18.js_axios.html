@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js axios</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        async function callbackHell(){
+            const response1 = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+            console.log("response1 : ", response1)
+            const response2 = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+            console.log("response2 : ", response2)
+            const response3 = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+            console.log("response3 : ", response3)
+            // console.log(response1)
+            // console.log(response1.data)
+            // console.log(response1.data.id)
+            // console.log(response1.data.title)
+            // console.log(response1.data.body)
+        }
+        callbackHell();
+        console.log("hello world")
+    </script>
+</body>
+</html>
